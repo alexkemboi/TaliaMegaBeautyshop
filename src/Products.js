@@ -1,5 +1,4 @@
 import React from 'react';
-
 function Card({ imageSrc, title, description }) {
   return (
     <div className="col-md-2">

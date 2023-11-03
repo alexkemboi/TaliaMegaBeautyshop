@@ -1,0 +1,19 @@
+import React from 'react';
+const WhatsAppPopUp = ({ phone }) => {
+  const whatsappLink = `https://api.whatsapp.com/send?phone=${phone}`;
+
+  return (
+    <div className="whatsapp-popup" id="whatsapp-popup">
+      <button className="close-popup" onClick={closePopup}>Close</button>
+      <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
+        Chat with us on WhatsApp
+      </a>
+    </div>
+  );
+};
+
+const closePopup = () => {
+  document.selectElementById('whatsapp-popup').style.display = 'none';
+};
+
+export default WhatsAppPopUp;

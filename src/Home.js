@@ -5,6 +5,7 @@ import bodyscrubs from "./images/bodyscrubs.jpg"
 import cocoabutter from './images/cocoabutter.jpg'
 import collagen from './images/collagen.jpg'
 import collagenfacialserem from './images/collagenfacialserem.jpg'
+import talia from './images/talia.jpg'
 import combs from './images/Combs.jpg'
 import gek from "./images/Gek.jpg"
 import organicrice from './images/organicrice.jpg'
@@ -13,8 +14,6 @@ import spaboy from './images/spaboy.jpg'
 import vitamine from './images/vitamine.jpg'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { useState } from 'react';
-import Products from './Products';
-
 function Home() {
     const [showFullText, setShowFullText] = useState(false);
 
@@ -64,12 +63,11 @@ function Home() {
       setShowFullText(!showFullText);
     };
   return (
-    <>
-   
+    
       <div className="container bg-purple text-white m-auto">
       <nav className="navbar navbar-expand-lg navbar-light text-light bg-purple">
             <div className="container">
-                <a className="navbar-brand text-light" href="/">Talia Mega Beauty Shop</a>
+                <a className="navbar-brand text-light" href="#home">Talia Mega Beauty Shop</a>
                 <button
                 className="navbar-toggler"
                 type="button"
@@ -114,25 +112,30 @@ function Home() {
 
 
 
-  <div id="imageSlider" className="carousel slide bg-purple" data-ride="carousel">
+ <div>
+ <div id="imageSlider" className="w-100 carousel slide bg-purple" data-ride="carousel">
     <ol className="carousel-indicators">
       <li data-target="#imageSlider" data-slide-to="0" className="active"></li>
       <li data-target="#imageSlider" data-slide-to="1"></li>
       <li data-target="#imageSlider" data-slide-to="2"></li>
-      <li data-target="#imageSlider" data-slide-to="2"></li>
+      <li data-target="#imageSlider" data-slide-to="3"></li>
+      <li data-target="#imageSlider" data-slide-to="4"></li>
     </ol>
     <div className="carousel-inner">
       <div className="carousel-item active">
-        <img src={image1}className="d-block w-100 h-100 m-auto" alt="Image 1"></img>
+        <img src={image1}className="d-block w-100 h-100 m-auto" alt="tex"/>
       </div>
       <div className="carousel-item">
-        <img src={image2} className="d-block w-100 h-100 m-auto" alt="Image 1"></img>
+        <img src={image2} className="d-block w-100 h-100 m-auto" alt="tex"/>
       </div>
       <div className="carousel-item">
-        <img src={image3} className="d-block w-100 h-100 m-auto" alt="Image 3"></img>
+        <img src={image3} className="d-block w-100 h-100 m-auto" alt="text 3"/>
       </div>
       <div className="carousel-item">
-        <img src={vitamine} className="d-block w-100 h-100 m-auto" alt="Image 4"></img>
+        <img src={vitamine} className="d-block w-100 h-100 m-auto" alt="text 4"/>
+      </div>
+      <div className="carousel-item">
+        <img src={talia} className="d-block w-100 h-100 m-auto" alt="text 4"/>
       </div>
     </div>
     <a className="carousel-control-prev" href="#imageSlider" role="button" data-slide="prev">
@@ -144,6 +147,7 @@ function Home() {
       <span className="sr-only">Next</span>
     </a>
   </div>
+ <div/>
 
 
  
@@ -186,40 +190,44 @@ function Home() {
         </p>
       </div>
       <div className="col-lg-6">
-        {/* <!-- Image or Visual Representation of Your Business --> */}
-        <img src={image2} alt="About Us" className="img-fluid rounded-circle"></img>
+         <img src={image2} alt="About Us" className="img-fluid rounded-3"></img>
       </div>
     </div>
   </div>
 </section>
 
      
-
-
-
-
-
-
 <section id="products">
   <div className="bg-purple">
     <h2 className="text-center text-light fs-3xl m:fs-4xl l:fs-5xl fw-bold s:fw-heavy lh-tight mb-2 long">Our Products</h2>    
-    <div className="row">             
+    
+    <div className='container'>
+      <div className='card-check'>
+      <div className="row">             
     <div className="col-lg-2 col-md-6 mb-1">
         <div className="card bg-purple">
-          <img src={image2} alt="Product 1" className="card-img-top"></img>
+          <img src={image2} alt="Product 1" className="card-img-top"/>
           <div className="card-body">
             <h5 className="card-title">Body Scrubs</h5>            
-            <a href="#" className="btn text-white border-light bg-dark">View Details</a>
+            <a href="/" className="btn text-white border-light bg-dark">View Details</a>
           </div>
         </div>
       </div>
-
+      <div className="col-lg-2 col-md-6 mb-1">
+        <div className="card bg-purple">
+          <img src={organicrice} alt="organirice" className="card-img-top"></img>
+          <div className="card-body">
+            <h5 className="card-title">Organic Rice</h5>
+            <a href="/" className="btn text-white border-light bg-dark">View Details</a>
+          </div>
+        </div>
+      </div> 
       <div className="col-lg-2 col-md-6 mb-1">
         <div className="card bg-purple">
           <img src={cocoabutter} alt="cocoabutter" className="card-img-top"></img>
           <div className="card-body">
             <h5 className="card-title">Cocoabutter</h5>            
-            <a href="#" className="btn text-white border-light bg-dark">View Details</a>
+            <a href="/" className="btn text-white border-light bg-dark">View Details</a>
           </div>
         </div>
       </div>
@@ -229,7 +237,7 @@ function Home() {
           <img src={collagen} alt="collagen" className="card-img-top"></img>
           <div className="card-body">
             <h5 className="card-title">Collagen</h5>
-            <a href="#" className="btn text-white border-light bg-dark">View Details</a>
+            <a href="/" className="btn text-white border-light bg-dark">View Details</a>
           </div>
         </div>
       </div>
@@ -238,17 +246,61 @@ function Home() {
           <img src={collagenfacialserem} alt="collagenfacialserem" className="card-img-top"></img>
           <div className="card-body">
             <h5 className="card-title">Combs</h5>
-            <a href="#" className="btn text-white border-light bg-dark">View Details</a>
+            <a href="/" className="btn text-white border-light bg-dark">View Details</a>
           </div>
         </div>
       </div>
-
+      <div className="col-lg-2 col-md-6 mb-1">
+        <div className="card bg-purple">
+          <img src={bodyscrubs} alt="bodyscrubs" className="card-img-top"></img>
+          <div className="card-body">
+            <h5 className="card-title">bodyscrubs</h5>
+            <a href="/" className="btn text-white border-light bg-dark">View Details</a>
+          </div>
+        </div>
+      </div>
+      <div className="col-lg-2 col-md-6 mb-1">
+        <div className="card bg-purple">
+          <img src={combs} alt="combs" className="card-img-top"></img>
+          <div className="card-body">
+            <h5 className="card-title">Combs</h5>
+            <a href="/" className="btn text-white border-light bg-dark">View Details</a>
+          </div>
+        </div>
+      </div>
+      <div className="col-lg-2 col-md-6 mb-1">
+        <div className="card bg-purple">
+          <img src={rose} alt="rose" className="card-img-top"></img>
+          <div className="card-body">
+            <h5 className="card-title">rose</h5>
+            <a href="/" className="btn text-white border-light bg-dark">View Details</a>
+          </div>
+        </div>
+      </div>
+      <div className="col-lg-2 col-md-6 mb-1">
+        <div className="card bg-purple">
+          <img src={rose} alt="rose" className="card-img-top"></img>
+          <div className="card-body">
+            <h5 className="card-title">rose</h5>
+            <a href="/" className="btn text-white border-light bg-dark">View Details</a>
+          </div>
+        </div>
+      </div>
+      <div className="col-lg-2 col-md-6 mb-1">
+        <div className="card bg-purple">
+          <img src={spaboy} alt="spaboy" className="card-img-top"></img>
+          <div className="card-body">
+            <h5 className="card-title">spaboy</h5>
+            <a href="/" className="btn text-white border-light bg-dark">View Details</a>
+          </div>
+        </div>
+      </div>
       <div className="col-lg-2 col-md-6 mb-1">
         <div className="card bg-purple">
           <img src={gek} alt="gek" className="card-img-top"></img>
           <div className="card-body">
             <h5 className="card-title">Geks</h5>
-            <a href="#" className="btn text-white border-light bg-dark">View Details</a>
+            <a href="/" className="btn text-white border-light bg-dark">View Details</a>
           </div>
         </div>
       </div>
@@ -258,11 +310,16 @@ function Home() {
           <img src={organicrice} alt="organirice" className="card-img-top"></img>
           <div className="card-body">
             <h5 className="card-title">Organic Rice</h5>
-            <a href="#" className="btn text-white border-light bg-dark">View Details</a>
+            <a href="/" className="btn text-white border-light bg-dark">View Details</a>
           </div>
         </div>
+      </div> 
+      </div>     
+    </div>
       </div>
-      
+     
+    <div>     
+      <button onClick={openWhatsAppPopup}>Open WhatsApp</button>
     </div>
   </div>
 </section>
@@ -284,8 +341,9 @@ function Home() {
           We're here to assist you with any inquiries or beauty-related questions you may have. Feel free to reach out to us through the following channels:
         </p>
         <ul>
-          <li className='text-light'><i className="text-light fas fa-envelope"></i> Email: <a href="mailto:mainaantony19@gmail.com">mainaantony19@gmail.com</a></li>
-          <li className='text-light'><i className="text-light fas fa-phone"></i> Phone: +254 719 382764</li>
+          <li className='text-light'><i className="text-light fas fa-envelope"></i>Email :<a href="mailto:mainaantony19@gmail.com">info.taliamega.co.ke</a></li>
+          <li className='text-light'><i className="text-light fas fa-phone"></i> Contact no +254722445567
+</li>
           <li className='text-light'><i className=" text-light fas fa-map-marker-alt"></i> Address: 123 Dubious Street, Nairobi</li>
         </ul>
       </div>
@@ -317,8 +375,11 @@ function Home() {
         </div>
       </div>
       </div>
-    </>
+    </div>
   );
+  
 }
-
+const openWhatsAppPopup = () => {
+  document.querySelector('.whatsapp-popup').style.display = 'block';
+};
 export default Home;

@@ -22,3 +22,20 @@ code {
   background-color:purple;
 
 }
+.whatsapp-popup {
+  display: block;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25d366;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.close-popup {
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
