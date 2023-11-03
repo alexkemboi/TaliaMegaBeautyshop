@@ -1,8 +1,19 @@
-import image2 from './images/image2.jpg'
-import image3 from './images/image3.jpeg'
+import image2 from './images/Gek.jpg'
+import image3 from './images/spaboy.jpg'
 import image1 from './images/Image1.jpeg'
+import bodyscrubs from "./images/bodyscrubs.jpg"
+import cocoabutter from './images/cocoabutter.jpg'
+import collagen from './images/collagen.jpg'
+import collagenfacialserem from './images/collagenfacialserem.jpg'
+import combs from './images/Combs.jpg'
+import gek from "./images/Gek.jpg"
+import organicrice from './images/organicrice.jpg'
+import rose from './images/Rose.jpg'
+import spaboy from './images/spaboy.jpg'
+import vitamine from './images/vitamine.jpg'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { useState } from 'react';
+import Products from './Products';
 
 function Home() {
     const [showFullText, setShowFullText] = useState(false);
@@ -73,22 +84,22 @@ function Home() {
                 <div className="collapse navbar-collapse" id="navbarNav">
                 <ul className="navbar-nav ml-auto text-light">
                     <li className="nav-item">
-                    <a className="nav-link text-light" href="/">Home</a>
+                    <a className="nav-link text-light" href="#home">Home</a>
                     </li>
                     <li className="nav-item">
-                    <a className="nav-link text-light" href="/products">Products</a>
+                    <a className="nav-link text-light" href="#about">About Us</a>
                     </li>
                     <li className="nav-item">
-                    <a className="nav-link text-light" href="/services">Services</a>
+                    <a className="nav-link text-light" href="#products">Products</a>
                     </li>
                     <li className="nav-item">
-                    <a className="nav-link text-light" href="/about">About Us</a>
+                    <a className="nav-link text-light" href="#services">Services</a>
                     </li>
                     <li className="nav-item">
-                    <a className="nav-link text-light" href="/contact">Contact Us</a>
+                    <a className="nav-link text-light" href="#contact">Contact Us</a>
                     </li>
                     <li className="nav-item">
-                    <a className="nav-link text-light" href="/cart">
+                    <a className="nav-link text-light" href="#cart">
                         <i className="fas fa-shopping-cart"></i> Cart
                     </a>
                     </li>
@@ -108,6 +119,7 @@ function Home() {
       <li data-target="#imageSlider" data-slide-to="0" className="active"></li>
       <li data-target="#imageSlider" data-slide-to="1"></li>
       <li data-target="#imageSlider" data-slide-to="2"></li>
+      <li data-target="#imageSlider" data-slide-to="2"></li>
     </ol>
     <div className="carousel-inner">
       <div className="carousel-item active">
@@ -118,6 +130,9 @@ function Home() {
       </div>
       <div className="carousel-item">
         <img src={image3} className="d-block w-100 h-100 m-auto" alt="Image 3"></img>
+      </div>
+      <div className="carousel-item">
+        <img src={vitamine} className="d-block w-100 h-100 m-auto" alt="Image 4"></img>
       </div>
     </div>
     <a className="carousel-control-prev" href="#imageSlider" role="button" data-slide="prev">
@@ -137,7 +152,7 @@ function Home() {
 
 
 
-  <section className="hero bg-purple mt-3">
+  <section className="hero bg-purple mt-3" id="home">
       <div className="container">
         <div className="row">
           <div className="col-lg-12">
@@ -155,16 +170,7 @@ function Home() {
           </div>
         </div>
       </div>
-    </section>
-
-
-
-      
-
-
-
-
-
+    </section>   
 
 
 <section id="about" className="mt-3 py-5 bg-purple">
@@ -196,16 +202,13 @@ function Home() {
 
 <section id="products">
   <div className="bg-purple">
-    <h2 className="text-center text-light fs-3xl m:fs-4xl l:fs-5xl fw-bold s:fw-heavy lh-tight mb-2 long">Our Products</h2>
-    <div className="row">    
-         
+    <h2 className="text-center text-light fs-3xl m:fs-4xl l:fs-5xl fw-bold s:fw-heavy lh-tight mb-2 long">Our Products</h2>    
+    <div className="row">             
     <div className="col-lg-2 col-md-6 mb-1">
         <div className="card bg-purple">
           <img src={image2} alt="Product 1" className="card-img-top"></img>
-
           <div className="card-body">
-            <h5 className="card-title">Product 1</h5>
-            <p className="card-text">Description of Product 1.</p>
+            <h5 className="card-title">Body Scrubs</h5>            
             <a href="#" className="btn text-white border-light bg-dark">View Details</a>
           </div>
         </div>
@@ -213,45 +216,9 @@ function Home() {
 
       <div className="col-lg-2 col-md-6 mb-1">
         <div className="card bg-purple">
-          <img src={image2} alt="Product 1" className="card-img-top"></img>
-
+          <img src={cocoabutter} alt="cocoabutter" className="card-img-top"></img>
           <div className="card-body">
-            <h5 className="card-title">Product 1</h5>
-            <p className="card-text">Description of Product 1.</p>
-            <a href="#" className="btn text-white border-light bg-dark">View Details</a>
-          </div>
-        </div>
-      </div>
-   
-      <div className="col-lg-2 col-md-6 mb-1">
-        <div className="card bg-purple">
-          <img src={image2} alt="Product 2" className="card-img-top"></img>
-          <div className="card-body">
-            <h5 className="card-title">Product 2</h5>
-            <p className="card-text">Description of Product 2.</p>
-            <a href="#" className="btn text-white border-light bg-dark">View Details</a>
-          </div>
-        </div>
-      </div>
-      <div className="col-lg-2 col-md-6 mb-1">
-        <div className="card bg-purple">
-          <img src={image2} alt="Product 1" className="card-img-top"></img>
-
-          <div className="card-body">
-            <h5 className="card-title">Product 1</h5>
-            <p className="card-text">Description of Product 1.</p>
-            <a href="#" className="btn text-white border-light bg-dark">View Details</a>
-          </div>
-        </div>
-      </div>
-
-      <div className="col-lg-2 col-md-6 mb-1">
-        <div className="card bg-purple">
-          <img src={image2} alt="Product 1" className="card-img-top"></img>
-
-          <div className="card-body">
-            <h5 className="card-title">Product 1</h5>
-            <p className="card-text">Description of Product 1.</p>
+            <h5 className="card-title">Cocoabutter</h5>            
             <a href="#" className="btn text-white border-light bg-dark">View Details</a>
           </div>
         </div>
@@ -259,10 +226,38 @@ function Home() {
    
       <div className="col-lg-2 col-md-6 mb-1">
         <div className="card bg-purple">
-          <img src={image2} alt="Product 2" className="card-img-top"></img>
+          <img src={collagen} alt="collagen" className="card-img-top"></img>
           <div className="card-body">
-            <h5 className="card-title">Product 2</h5>
-            <p className="card-text">Description of Product 2.</p>
+            <h5 className="card-title">Collagen</h5>
+            <a href="#" className="btn text-white border-light bg-dark">View Details</a>
+          </div>
+        </div>
+      </div>
+      <div className="col-lg-2 col-md-6 mb-1">
+        <div className="card bg-purple">
+          <img src={collagenfacialserem} alt="collagenfacialserem" className="card-img-top"></img>
+          <div className="card-body">
+            <h5 className="card-title">Combs</h5>
+            <a href="#" className="btn text-white border-light bg-dark">View Details</a>
+          </div>
+        </div>
+      </div>
+
+      <div className="col-lg-2 col-md-6 mb-1">
+        <div className="card bg-purple">
+          <img src={gek} alt="gek" className="card-img-top"></img>
+          <div className="card-body">
+            <h5 className="card-title">Geks</h5>
+            <a href="#" className="btn text-white border-light bg-dark">View Details</a>
+          </div>
+        </div>
+      </div>
+   
+      <div className="col-lg-2 col-md-6 mb-1">
+        <div className="card bg-purple">
+          <img src={organicrice} alt="organirice" className="card-img-top"></img>
+          <div className="card-body">
+            <h5 className="card-title">Organic Rice</h5>
             <a href="#" className="btn text-white border-light bg-dark">View Details</a>
           </div>
         </div>
