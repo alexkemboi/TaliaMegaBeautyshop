@@ -10,27 +10,35 @@ body {
 .body-background{
   background-color:#8B008B;
 }
+.text-dark{
+  color: #8B008B;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
 .bg-purple{
   background-color:purple;
-  color:purple;
+  color:white;
 }
 .btn-primary{
   background-color:purple;
-
 }
 .whatsapp-popup {
   display: block;
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: #25d366;
   padding: 10px;
+  color: #fff; /* White text color */
+  padding: 10px 20px; /* Adjust padding as needed */
+  border: none;
   border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center; /* Center icon and text horizontally */
+  justify-content: space-between; /* Space between icon and text */
 }
 
 .close-popup {
